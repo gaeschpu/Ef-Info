@@ -3,3 +3,6 @@ MESSAGE = [12, 9, 19, 20, 0, 18, 9, 4, 4, 12, 5]
 
 for index in MESSAGE:
     print(ALPHABET[index], end =" ")
+
+
+    
