@@ -1,3 +1,6 @@
+from operator import truediv
+
+
 gesucht = 'test'
 
 gefunden = [] #ist eine LSite, wenn man einen Buchstaben eigeben hat der ein oder mehrmals im gesuchten Wort vorkommt
@@ -18,7 +21,7 @@ def is_valid(inp):
 
 def eingabe():
     buchstabe = input('Buchstabe? ')
-    while not is_valid(buchstabe):         #wird überprüft 
+    while not is_valid(buchstabe):         #wird überprüft ob es
         buchstabe = input('Buchstabe? ')
     return buchstabe.lower()
 
@@ -35,10 +38,22 @@ def gewonnen(): #wenn der buchstabe richitg ist dann wird er geprintet
     return True
 
 def game_over():
-    return False
+    if len(falsch_geraten)== 7:
+        return true
+    else return false
 
 def play():
-    pass
+    #Ab jetzt wird das spiel proggramiert 
+    while not game_over():
+        buchstabe = eingabe()
+        auswerten(buchstabe)
+        print(buchstabe)
+        show()
+    if gewonnen():
+        print('You won')
+    else:
+        print(f'Das gesuchte Wort wäre' gesucht )
 
 
 
+play()
