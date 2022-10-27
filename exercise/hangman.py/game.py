@@ -2,6 +2,10 @@ from operator import truediv
 
 
 gesucht = 'test'
+buchstabe = [ 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
+MESSAGE = [12, 9, 19, 20, 0, 18, 9, 4, 4, 12, 5]
+
+
 
 gefunden = [] #ist eine LSite, wenn man einen Buchstaben eigeben hat der ein oder mehrmals im gesuchten Wort vorkommt
 falsch_geraten = []# ist eine lsite für der Buchstaben die nicht im wort vorkommen
@@ -37,10 +41,14 @@ def gewonnen(): #wenn der buchstabe richitg ist dann wird er geprintet
             return False
     return True
 
+#def endewenngewonnen():
+    if gesucht= true 
+
 def game_over():
     if len(falsch_geraten)== 7:
-        return true
-    else return false
+        return True
+    else:
+         return False
 
 def play():
     #Ab jetzt wird das spiel proggramiert 
@@ -52,7 +60,7 @@ def play():
     if gewonnen():
         print('You won')
     else:
-        print(f'Das gesuchte Wort wäre' gesucht )
+        print(f'Das gesuchte Wort wäre:' ,gesucht )
 
 
 
