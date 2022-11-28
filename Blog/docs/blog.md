@@ -1,7 +1,7 @@
-# Blogeintrag
-Am Anfang war ich richtig verloren muss ich sagen, doch zu meiner Verteidigung habe ich seit einem Jahr nicht mehr programmiert habe. 
-Die ersten paar Zeilen waren recht harzig, doch desto weiter ich kam umso mehr spass hatte ich. 
-Dass fande ich meinen Lustigsten Fehler, doch ich finde ein Stern sah besser aus als der der Verlangt war.
+# Erste Lektion Informatik EF
+Am Anfang war ich richtig verloren muss ich sagen, doch zu meiner Verteidigung, ich habe seit einem Jahr nicht mehr programmiert. 
+Die ersten paar Zeilen waren recht harzig, doch desto weiter ich kam umso mehr Spass hatte ich. 
+Dann unterlief mir ein lustiger Fehler und zwar solte der Code ein Ster werden, doch es wurde dann das. 
 
 from turtle import *
 fillcolor("red")
