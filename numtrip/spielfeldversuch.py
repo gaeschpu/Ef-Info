@@ -56,7 +56,7 @@ def play():
     spielfeld()
     while True:
         x, y = eingabe()
-        process[x, y]
+        process[x, y] # einfach mal andere Klammer versucht weil ich gegooglet habe was der Fehler sein soll 
         spielfeld()
 
 play()
