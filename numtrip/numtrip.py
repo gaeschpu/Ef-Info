@@ -42,10 +42,26 @@ def eingabe():
 eingabe()
 """
 def eingabe():
+    
     x = input('Welche Spalte soll ausgewählt werden? ')
-    x = int(x)
+    try:
+            x = int(x)
+    except:
+        print('Wissen sie nicht was eine Zahl ist?')
+
     y = input('Welche Zeile soll ausgewählt werden? ')
-    y = int(y)
+    try:
+        y = int(y)
+     except:
+        print('Wissen sie nicht was eine Zahl ist?')
+"""""
+    if y > 5: 
+        print('Muss zwischen 1-5 sein!!!')
+              
+    else:
+        return y
+"""
+
     return (x - 1, y - 1)
 
 
