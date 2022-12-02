@@ -1,62 +1,62 @@
-zahlen_matrix = [
-    [2, 4, 16, 8, 8],
-    [4, 26, 8, 2, 1],
-    [4, 4, 16, 4, 2],
-    [2, 8, 1, 4, 1],
-    [2, 4, 4, 4, 4]
-]
+1
+feld= [2,4,2,4,2],[4,2,8,8,8],[4,8,4,4,4],[2,4,4,8,8],[8,4,8,16,32]
+def spielfeld():
+    zeilennummer= 1
+    """
+    print('          A      B      C      D      E')
+    """
+    print('          1      2      3      4      5')
 
-#print(zahlen_matrix)
-def obere_zeile():
-    print(f"      1      2      3      4      5    ")
+    for zeile in feld:
+        print('      +------+------+------+------+------+')
+        print('      |      |      |      |      |      |')
+        print(f'   {(zeilennummer)}  ', end='')
+        for zelle in zeile:
+            if zelle >= 10000:
+                print(f'| {(zelle)}', end='')
+            elif zelle >= 1000:
+                print(f'| {(zelle)} ', end='')
+            elif zelle >= 100:
+                print(f'|  {(zelle)} ', end='')
+            elif zelle >= 10:
+                print(f'|  {(zelle)}  ', end='')
+            else:
+                print(f'|   {(zelle)}  ', end='')
+        print('|')
+        zeilennummer=zeilennummer+1
+        print('      |      |      |      |      |      |')
+    print('      +------+------+------+------+------+')
+    
 
-def rand():
-    print(f"  +------+------+------+------+------+")
-
-def leer_zeile():
-    print(f"  ¦      ¦      ¦      ¦      ¦      ¦")
-
-
-def dazwischen_zahl(zahlenliste,nr):
-    print(f"{nr} ¦", end = '')
-    for zahl in zahlenliste:
-        if (zahl<10):
-            print(" ", end = '')
-        print("  ", end = '')
-        if (zahl<0):
-            print(" ",end = '')
-        else:
-            print(zahl, end = '')
-        print("  ¦", end = '')
-    print("")
-
-
+spielfeld()
+"""
 def eingabe():
-    x,y=input("Welches Feld soll geleert werden: ").split()
-    return int(x),int👍
- 
-def eingabe_ueberprüfen(zahl):
+    #eingabe= input("Geben sie eine Zahl ein: ")
+    x,y=input("Geben sie zwei zahlen ein")
     try:
-        if zahl < 0:
-            raise 'Achtung Negative Zahl'
-        if zahl.isalpha():
-            raise 'Achtung Keine Zahl'
+        eingabe = int(eingabe)
     except:
-        return False
+        print('Das ist keine Zahl!')
+    
+
+eingabe()
+"""
+def eingabe():
+    x = input('Welche Spalte soll ausgewählt werden? ')
+    x = int(x)
+    y = input('Welche Zeile soll ausgewählt werden? ')
+    y = int(y)
+    return (x - 1, y - 1)
 
 
+def process(col, row): # col= kollone row= spalte 
+    feld[row][col] = 0 #auf dem spielfeld kollone[] spalte[] auf null setzen
 
-def auswerten(x,y):
-    obere_zeile()
-    rand()
-    zahlen_matrix[x-1][y-1]=-1
-    for i in range(5):
-        leer_zeile()
-        dazwischen_zahl(zahlen_matrix[i],i+1)
-        leer_zeile()
-        rand()
-while True:
-    x,y=eingabe()
-    eingabe_ueberprüfen(x)
-    eingabe_ueberprüfen
-    auswerten(x,y)
+def play():
+    spielfeld()
+    while True:
+        x, y = eingabe()
+        process(x, y) 
+        spielfeld()
+
+play()
