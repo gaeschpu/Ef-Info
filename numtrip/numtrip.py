@@ -52,17 +52,20 @@ def eingabe():
     y = input('Welche Zeile soll ausgewählt werden? ')
     try:
         y = int(y)
-     except:
+    except:
         print('Wissen sie nicht was eine Zahl ist?')
-"""""
+    """""
     if y > 5: 
         print('Muss zwischen 1-5 sein!!!')
               
     else:
         return y
 """
-
     return (x - 1, y - 1)
+
+
+
+
 
 
 def process(col, row): # col= kollone row= spalte 

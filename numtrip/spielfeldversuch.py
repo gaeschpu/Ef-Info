@@ -50,13 +50,13 @@ def eingabe():
 
 
 def process(col, row): # col= kollone row= spalte 
-    spielfeld[row][col] = 0 #auf dem spielfeld kollone[] spalte[] auf null setzen
+    feld[row][col] = 0 #auf dem spielfeld kollone[] spalte[] auf null setzen
 
 def play():
     spielfeld()
     while True:
         x, y = eingabe()
-        process[x, y] # einfach mal andere Klammer versucht weil ich gegooglet habe was der Fehler sein soll 
+        process(x, y) 
         spielfeld()
 
 play()
