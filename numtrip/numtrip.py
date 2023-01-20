@@ -11,7 +11,9 @@ def spielfeld():
         print('      +------+------+------+------+------+')
         print('      |      |      |      |      |      |')
         print(f'   {(zeilennummer)}  ', end='')
+
         for zelle in zeile:
+            
             if zelle >= 10000:
                 print(f'| {(zelle)}', end='')
             elif zelle >= 1000:
@@ -20,12 +22,16 @@ def spielfeld():
                 print(f'|  {(zelle)} ', end='')
             elif zelle >= 10:
                 print(f'|  {(zelle)}  ', end='')
+            elif zelle <0 :
+                print(f'|      ', end='')
             else:
                 print(f'|   {(zelle)}  ', end='')
         print('|')
         zeilennummer=zeilennummer+1
         print('      |      |      |      |      |      |')
     print('      +------+------+------+------+------+')
+   
+
     
 
 spielfeld()
@@ -75,23 +81,26 @@ def aufdecken(zeile, spalte, zahl):
 # Feldüberprüfung
     if feld[zeile][spalte] == zahl:
         feld[zeile][spalte] = - 1
-        aufdecken(zeile + 1, spalte, zahl) # unten .aufdecken(zeile - 1, spalte, zahl) # oben aufdecken(zeile, spalte + 1, zahl) # rechts aufdecken(zeile, spalte - 1, zahl) # links return True
+        aufdecken(zeile + 1, spalte, zahl) # unten 
+        aufdecken(zeile - 1, spalte, zahl) # oben 
+        aufdecken(zeile, spalte + 1, zahl) # rechts 
+        aufdecken(zeile, spalte - 1, zahl) # links return True
     else:
         return False
-
-
-
 
 
 '''
 def process(col, row): # col= kollone row= spalte 
     feld[row][col] = 0 #auf dem spielfeld kollone[] spalte[] auf null setzen
 '''
+
 def play():
     spielfeld()
     while True:
         x, y = eingabe()
-        aufdecken(zeile, spalte, zahl)
+        zahl = feld[x][y]
+        aufdecken(x, y, zahl)
+        
         spielfeld()
 
 play()
