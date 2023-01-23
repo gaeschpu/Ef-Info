@@ -2,11 +2,11 @@ import random
 
 feld= [[2,4,2,4,2],[4,2,8,8,8],[4,8,4,4,4],[2,4,4,8,8],[8,4,8,16,32]]
 def spielfeld():
-    zeilennummer= 1
+    ynnummer= 1
    
     print('          1      2      3      4      5')
 
-    for zeile in feld:
+    for y in feld:
         print('      +------+------+------+------+------+')
         print('      |      |      |      |      |      |')
         print(f'   {(zeilennummer)}  ', end='')
@@ -26,7 +26,7 @@ def spielfeld():
             else:
                 print(f'|   {(zelle)}  ', end='')
         print('|')
-        zeilennummer=zeilennummer+1
+        ynnummer=ynnummer+1
         print('      |      |      |      |      |      |')
     print('      +------+------+------+------+------+')
    
@@ -65,7 +65,7 @@ def eingabe():
         print('Wissen sie nicht was eine Zahl ist?')
         return False
 
-    y = input('Welche Zeile soll ausgewählt werden? ')
+    y = input('Welche y soll ausgewählt werden? ')
     try:
         y = int(y)
     except:
@@ -107,8 +107,33 @@ def aufüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt
 """
 
 
-    
 
+
+"""
+"""
+def process(col, row): # col= kollone row= x 
+    feld[row][col] = 0 #auf dem spielfeld kollone[] x[] auf null setzen
+"""
+
+
+
+
+def aufdecken (x, y, zahl):
+# Rahmenbedingungen
+    if y < 0 or y > 4:
+        return False
+    if x < 0 or x> 4:
+        return False
+#Feldüberprüfung
+    if feld[y][x] == zahl:
+        feld[y][x] = -1
+        aufdecken(y + 1, x, zahl) # unten aufdecken 
+        (y - 1, x, zahl) # oben aufdecken
+        (y, x + 1, zahl) # rechts aufdecken
+        (y, x - 1, zahl) # links
+        return True
+    else:
+        return False
 
 
 def play():
