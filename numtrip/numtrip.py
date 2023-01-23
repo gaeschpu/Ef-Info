@@ -104,16 +104,16 @@ def aufüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt
         for b in range(4,-1,-1):
             if feld==0: 
                 feld[a][b]= random.choice(ersatzzahlen)
-"""
 
 
 
 
+
+
 """
-"""
-def process(col, row): # col= kollone row= x 
-    feld[row][col] = 0 #auf dem spielfeld kollone[] x[] auf null setzen
-"""
+# def process(col, row): # col= kollone row= x 
+ #   feld[row][col] = 0 #auf dem spielfeld kollone[] x[] auf null setzen
+
 
 
 
