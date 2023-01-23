@@ -2,9 +2,7 @@
 feld= [[2,4,2,4,2],[4,2,8,8,8],[4,8,4,4,4],[2,4,4,8,8],[8,4,8,16,32]]
 def spielfeld():
     zeilennummer= 1
-    """
-    print('          A      B      C      D      E')
-    """
+   
     print('          1      2      3      4      5')
 
     for zeile in feld:
@@ -23,7 +21,7 @@ def spielfeld():
             elif zelle >= 10:
                 print(f'|  {(zelle)}  ', end='')
             elif zelle <0 :
-                print(f'|      ', end='')
+                print(f'|      ', end='')# das ersetzt DAS fELD WENN ES UNTER 0 ist. 
             else:
                 print(f'|   {(zelle)}  ', end='')
         print('|')
@@ -35,20 +33,30 @@ def spielfeld():
     
 
 spielfeld()
-"""
-def eingabe():
-    #eingabe= input("Geben sie eine Zahl ein: ")
-    x,y=input("Geben sie zwei zahlen ein")
-    try:
-        eingabe = int(eingabe)
-    except:
-        print('Das ist keine Zahl!')
-    
 
-eingabe()
+
 """
-def eingabe():
+def eingabe_1():
     
+    val=False
+    while not val:
+        try:
+            eingabe=input('Welche Spalte soll ausgewählt werden? ')
+            eingabe=transform_eingabe(eingabe)
+            valid= eingabe is not None
+        except:
+            print('wissen sie nicht was eine Zahl ist?')
+    return(eingabe)
+        
+        if eingabe <0 or eingabe >4:
+            val=True 
+        else:
+            print('Wissen sie nicht was eine Zahl ist?')
+            val=False
+
+"""
+        
+def eingabe():
     x = input('Welche Spalte soll ausgewählt werden? ')
     try:
             x = int(x)
@@ -60,23 +68,16 @@ def eingabe():
     try:
         y = int(y)
     except:
-        print('Wissen sie nicht was eine Zahl ist?')
-#   
-    """""
-    if y > 5: 
-        print('Muss zwischen 1-5 sein!!!')
-              
-    else:
-        return y
-"""
-#
+        print('Wissen sie nicht was eine Zahl ist?') 
+ 
+ 
     return (x - 1, y - 1)
 
 def aufdecken(zeile, spalte, zahl):
 # Rahmenbedingungen
     if zeile < 0 or zeile > 4:
         return False
-    if spalte < 0 or zeile> 4:
+    if spalte < 0 or spalte> 4:
         return False
 # Feldüberprüfung
     if feld[zeile][spalte] == zahl:
@@ -89,10 +90,7 @@ def aufdecken(zeile, spalte, zahl):
         return False
 
 
-'''
-def process(col, row): # col= kollone row= spalte 
-    feld[row][col] = 0 #auf dem spielfeld kollone[] spalte[] auf null setzen
-'''
+
 
 def play():
     spielfeld()
