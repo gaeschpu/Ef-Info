@@ -1,4 +1,5 @@
-1
+import random
+
 feld= [[2,4,2,4,2],[4,2,8,8,8],[4,8,4,4,4],[2,4,4,8,8],[8,4,8,16,32]]
 def spielfeld():
     zeilennummer= 1
@@ -89,6 +90,24 @@ def aufdecken(zeile, spalte, zahl):
     else:
         return False
 
+def nachunten(): # verschiebt die 0 von aufedcken nach oben  
+    for a in range(5):
+        for b in range(4,0,-1):# weil es von 4 nach o zählen muss 
+            for j in range(5):
+                if feld[a][b]==0: 
+                    feld[a][b]=feld[a-1,b]# -1 dass es das obere Feld nimmt 
+                    feld[a-1,b]=0 #so wird das obere Feld auf 0 gesetzt 
+
+def aufüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt 
+    ersatzzahlen=[1,2,4]
+    for a in range(0,5):#von 0 bis fünf rauf 
+        for b in range(4,-1,-1):
+            if feld==0: 
+                feld[a][b]= random.choice(ersatzzahlen)
+
+
+
+    
 
 
 
