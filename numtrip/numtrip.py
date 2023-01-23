@@ -33,7 +33,7 @@ def spielfeld():
 
     
 
-spielfeld()
+
 
 
 """
@@ -89,7 +89,7 @@ def aufdecken(zeile, spalte, zahl):
         aufdecken(zeile, spalte - 1, zahl) # links return True
     else:
         return False
-
+""""
 def nachunten(): # verschiebt die 0 von aufedcken nach oben  
     for a in range(5):
         for b in range(4,0,-1):# weil es von 4 nach o zählen muss 
@@ -104,7 +104,7 @@ def aufüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt
         for b in range(4,-1,-1):
             if feld==0: 
                 feld[a][b]= random.choice(ersatzzahlen)
-
+"""
 
 
     
@@ -117,7 +117,7 @@ def play():
         x, y = eingabe()
         zahl = feld[x][y]
         aufdecken(x, y, zahl)
-        
-        spielfeld()
-
+        #nachunten()
+        #aufüllen()
+spielfeld()
 play()
