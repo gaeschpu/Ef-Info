@@ -29,9 +29,6 @@ def spielfeld():
         zeilennummer=zeilennummer+1
         print('      |      |      |      |      |      |')
     print('      +------+------+------+------+------+')
-   
-
-    
 
 def eingabe_x(): # EIngabe des Benutzers
     valid=False
@@ -68,62 +65,42 @@ def eingabe_y():
             print('Sie müssen eine Zahl eingeben')
     
     return(y-1)
-    
-
-
-
-
-    
-
-def aufdecken(zeile, spalte, zahl):
-# Rahmenbedingungen
-    if zeile < 0 or zeile > 4:
-        return False
-    if spalte < 0 or spalte> 4:
-        return False
-# Feldüberprüfung
-    if feld[zeile][spalte] == zahl:
-        feld[zeile][spalte] = - 1
-        aufdecken(zeile + 1, spalte, zahl) # unten 
-        aufdecken(zeile - 1, spalte, zahl) # oben 
-        aufdecken(zeile, spalte + 1, zahl) # rechts 
-        aufdecken(zeile, spalte - 1, zahl) # links return True
-    else:
-        return False
 
 def nachunten(): # verschiebt die 0 von aufedcken nach oben  
-    for a in range(5):
-        for b in range(4,0,-1):# weil es von 4 nach o zählen muss 
-            for j in range(5):
+    for j in range(5):
+        for a in range(4,0,-1):# weil es von 4 nach 1 zählen muss 
+            for b in range(5):
                 if feld[a][b]==0: 
-                    feld[a][b]=feld[a-1,b]# -1 dass es das obere Feld nimmt 
-                    feld[a-1,b]=0 #so wird das obere Feld auf 0 gesetzt 
+                    feld[a][b]=feld[a-1][b]# -1 dass es das obere Feld nimmt 
+                    feld[a-1][b]=0 #so wird das obere Feld auf 0 gesetzt 
 
-def aufüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt 
+def auffüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt 
     ersatzzahlen=[1,2,4]
     for a in range(0,5):#von 0 bis fünf rauf 
         for b in range(4,-1,-1):
-            if feld==0: 
-                feld[a][b]= random.choice(ersatzzahlen)
+            if feld[a][b]==0: 
+                feld[a][b] = random.choice(ersatzzahlen)
 
-
-
-
-
-
-
-
-
-
-
-
-
-def aufdecken (x, y, zahl):
-# Rahmenbedingungen
-    if y < 0 or y > 4:
-        return False
-    if x < 0 or x> 4:
-        return False
+def überprüfung():
+    partner = False
+    for a in range(5):
+        for b in range(5):
+            if a > 0:
+                if feld[a][b] == feld[a - 1][b]:
+                    partner = True
+            if a < 4:
+                if feld[a][b] == feld[a + 1][b]:
+                    partner = True
+            if b > 0:
+                if feld[a][b] == feld[a][b - 1]:
+                    partner = True
+            if b < 4:
+                if feld[a][b] == feld[a][b + 1]:
+                    partner = True
+    if partner == True:
+        pass
+    else:
+        print('Keinen partner, gib neue zahl ein')
 
 def aufdecken(zeile, spalte, zahl):
 # Rahmenbedingungen
@@ -133,7 +110,7 @@ def aufdecken(zeile, spalte, zahl):
         return False
 # Feldüberprüfung
     if feld[zeile][spalte] == zahl:
-        feld[zeile][spalte] = - 1
+        feld[zeile][spalte] = 0
         aufdecken(zeile + 1, spalte, zahl) # unten .
         aufdecken(zeile - 1, spalte, zahl) # oben 
         aufdecken (zeile, spalte + 1, zahl) # rechts
@@ -142,18 +119,16 @@ def aufdecken(zeile, spalte, zahl):
     else:
         return False
 
-
-
-
 def play():
     spielfeld()
     while True:
         x= eingabe_x()
         y=eingabe_y()
+        überprüfung()
         zahl = feld[x][y]
         aufdecken(x, y, zahl)
-        aufüllen()
+        feld[x][y] = zahl*2
         nachunten()
-        
+        auffüllen()
         spielfeld()
 play()
