@@ -5,7 +5,7 @@ Ist doch ein simples Spiel, auf Zahlen drücken und sie Fusionieren, genau so ka
 Doch als wir mit der Programmation begannen merkte ich schnell, dass es nicht so einfach ist wie es beim spielen aussieht. 
 Schon nur das Spielfeld mit gesetzen zahlen die sich nicht bewegen haben mir mühe bereitet. 
 Doch ich bin zuversichtlich dass es irgendwann mal spielbar sein wird;)
-23.01.2023
+**24.01.2023**
 24h vor der Abgabe des Games bin zwar zuversichlich dass das Game spielbar sein wird, doch wie gut und wie schön es dann wirklich ist werden wir ja sehen. 
 ## Zum Game: 
 Um es überhaupt spielen zu können müssen Sie: 
@@ -16,6 +16,8 @@ Um es überhaupt spielen zu können müssen Sie:
 
 ## Top-Down entwurf
 ***
+Hier könnt ihr sehen was ich mir so als Grundidee und Plangun vorgenommen hatte:
+[image](Screenshot_20230124_212259)
 
 ## Code erklärung
 ***
