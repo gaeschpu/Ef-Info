@@ -49,11 +49,6 @@ def eingabe_x(): # EIngabe des Benutzers
         except:    
             print('Sie müssen eine Zahl eingeben')
     
-    
-        pass
-    else:
-        print('Zahl muss zwischen 1 und 5 sein')
-        eingabe_x()
     return(x-1)
     
 
