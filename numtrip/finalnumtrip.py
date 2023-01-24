@@ -38,15 +38,22 @@ def eingabe_x(): # EIngabe des Benutzers
     while not valid:
         try:
             x=input('Geben sie eine Spalte ein ')
-            if x.isnumeric: 
-                valid=True
-        except:
+            if not x.isnumeric():
+                continue# macht dass es wieder von vorne (while) anfängt
+            x=int(x)
+            if x<0 or x>5:# muss doch grösser als O und kleiner als 5 sein?
+                print('Zahl muss zwischen 1 und 5 sein')
+                continue
+            valid=True
+
+        except:    
             print('Sie müssen eine Zahl eingeben')
-    x=int(x)
-    if x<6 or x>0:
+    
+    
         pass
     else:
         print('Zahl muss zwischen 1 und 5 sein')
+        eingabe_x()
     return(x-1)
     
 
@@ -55,16 +62,18 @@ def eingabe_y():
     while not valid:
         try:
             y=input('Geben sie eine Zeile ein ')
-            if y.isnumeric: 
-                valid=True
+            if not y.isnumeric and len(y)==1:
+                continue
+            y=int(y)
+            if y<0 or y>5:# muss doch grösser als O und kleiner als 5 sein?
+                print('Zahl muss zwischen 1 und 5 sein')
+                continue
+            valid=True
         except:
             print('Sie müssen eine Zahl eingeben')
-    y=int(y)
-    if y<6 or y>0:
-        pass
-    else:
-        print('Zahl muss zwischen 1 und 5 sein')
+    
     return(y-1)
+    
 
 
 
