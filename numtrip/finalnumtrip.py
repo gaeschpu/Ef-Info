@@ -33,28 +33,43 @@ def spielfeld():
 
     
 
+def eingabe_x(): # EIngabe des Benutzers
+    valid=False
+    while not valid:
+        try:
+            x=input('Geben sie eine Spalte ein ')
+            if x.isnumeric: 
+                valid=True
+        except:
+            print('Sie müssen eine Zahl eingeben')
+    x=int(x)
+    if x<6 or x>0:
+        pass
+    else:
+        print('Zahl muss zwischen 1 und 5 sein')
+    return(x-1)
+    
 
+def eingabe_y():
+    valid=False
+    while not valid:
+        try:
+            y=input('Geben sie eine Zeile ein ')
+            if y.isnumeric: 
+                valid=True
+        except:
+            print('Sie müssen eine Zahl eingeben')
+    y=int(y)
+    if y<6 or y>0:
+        pass
+    else:
+        print('Zahl muss zwischen 1 und 5 sein')
+    return(y-1)
 
 
 
 
     
-def eingabe():
-    x = input('Welche Spalte soll ausgewählt werden? ')
-    try:
-            x = int(x)
-    except:
-        print('Wissen sie nicht was eine Zahl ist?')
-        return False
-
-    y = input('Welche y soll ausgewählt werden? ')
-    try:
-        y = int(y)
-    except:
-        print('Wissen sie nicht was eine Zahl ist?') 
- 
- 
-    return (x - 1, y - 1)
 
 def aufdecken(zeile, spalte, zahl):
 # Rahmenbedingungen
@@ -93,8 +108,7 @@ def aufüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt
 
 
 
-def process(col, row): # col= kollone row= x 
-    feld[row][col] = 0 #auf dem spielfeld kollone[] x[] auf null setzen
+
 
 
 
@@ -130,7 +144,8 @@ def aufdecken(zeile, spalte, zahl):
 def play():
     spielfeld()
     while True:
-        x, y = eingabe()
+        x= eingabe_x()
+        y=eingabe_y()
         zahl = feld[x][y]
         aufdecken(x, y, zahl)
         aufüllen()
