@@ -81,6 +81,8 @@ def auffüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüll
             if feld[a][b]==0: 
                 feld[a][b] = random.choice(ersatzzahlen)
 
+
+#
 def überprüfung(): # ausprobiert(Jodoks Code) würde machen dass man keine alleinstehende zahl auswählen kann
     partner = False
     for a in range(5):
