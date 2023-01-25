@@ -44,5 +44,7 @@ def eingabe_x():
 ``` 
 ## Tipps falls ihr es nachproggramieren wollt
 ***
-Ich würde euch wirklich zu herzen legen einen guten **Top Down Entwurf** zu machen, da es hilft ein bisschen den überblick zu behalten was man noch alles machen muss. Ein anderer Tipp den ich euch geben kann wäre, einfach mal ein **Grundspiel programmieren** und am Schluss dann alles zu Opimieren. Ich habe viel zu lange am Spielfeld herumgetüftelt anstatt einfach mal eines zu machen und dann am Schluss zu optimieren.
+Ich würde euch wirklich zu herzen legen einen guten **Top Down Entwurf** zu machen, da es hilft ein bisschen den überblick zu behalten was man noch alles machen muss. Ein anderer Tipp den ich euch geben kann wäre, einfach mal ein **Grundspiel programmieren** und am Schluss dann alles zu Opimieren. Ich habe viel zu lange am Spielfeld herumgetüftelt anstatt einfach mal eines zu machen und dann am Schluss zu optimieren. Was ichc euch auch noch stark empfehlen kann ist sich von anderen Codes **inspirieren**(nicht kopieren;-)) zu lassen. 
+Ich hoffe diese Tipps konnten euch ein bisschen helfen. 
+
 
