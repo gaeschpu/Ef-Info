@@ -1,6 +1,6 @@
 import random
 
-feld= [[2,4,2,4,2],[4,2,8,8,8],[4,8,4,4,4],[2,4,4,8,8],[8,4,8,16,32]]
+feld= [[4,4,2,2,8],[4,2,2,8,8],[4,8,4,4,4],[2,2,4,8,8],[8,8,4,4,8]]
 def spielfeld():
     zeilennummer=1
    
@@ -49,7 +49,7 @@ def eingabe_x(): # EIngabe des Benutzers
     return(x-1)
     
 
-def eingabe_y():
+def eingabe_y(): # Zeilen Eingabe y 
     valid=False
     while not valid:
         try:
@@ -57,7 +57,7 @@ def eingabe_y():
             if not y.isnumeric and len(y)==1:
                 continue
             y=int(y)
-            if y<0 or y>5:# muss doch grösser als O und kleiner als 5 sein?
+            if y<0 or y>5:# muss doch grösser als O und kleiner als 6 sein?
                 print('Zahl muss zwischen 1 und 5 sein')
                 continue
             valid=True
@@ -75,13 +75,13 @@ def nachunten(): # verschiebt die 0 von aufedcken nach oben
                     feld[a-1][b]=0 #so wird das obere Feld auf 0 gesetzt 
 
 def auffüllen(): # die 0 wird mit einer random zahl aus ersatzzahlen aufgefüllt 
-    ersatzzahlen=[1,2,4]
+    ersatzzahlen=[1,2,4,8]
     for a in range(0,5):#von 0 bis fünf rauf 
         for b in range(4,-1,-1):
             if feld[a][b]==0: 
                 feld[a][b] = random.choice(ersatzzahlen)
 
-def überprüfung():
+def überprüfung(): # ausprobiert(Jodoks Code) würde machen dass man keine alleinstehende zahl auswählen kann
     partner = False
     for a in range(5):
         for b in range(5):
@@ -109,7 +109,7 @@ def aufdecken(zeile, spalte, zahl):
     if spalte < 0 or spalte> 4:
         return False
 # Feldüberprüfung
-    if feld[zeile][spalte] == zahl:
+    if feld[zeile][spalte] == zahl: # kontoliiert ob es rundum das Feld das man ausgewählt hat eine gleiche zahl hat
         feld[zeile][spalte] = 0
         aufdecken(zeile + 1, spalte, zahl) # unten .
         aufdecken(zeile - 1, spalte, zahl) # oben 
