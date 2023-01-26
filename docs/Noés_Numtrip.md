@@ -1,6 +1,6 @@
 # Numtrip in Arbeit 
 *** 
-[image](numtrip-2a8a9be4a578524153597160fd864606)
+[img](/Ef-Info/docs/images/numtripvideo.mp4)
 Ist doch ein simples Spiel, auf Zahlen drücken und sie Fusionieren, genau so kam mir numtrip vor.
 Doch als wir mit der Programmation begannen merkte ich schnell, dass es nicht so einfach ist wie es beim spielen aussieht. 
 Schon nur das Spielfeld mit gesetzen zahlen die sich nicht bewegen haben mir mühe bereitet. 
@@ -16,8 +16,8 @@ Um es überhaupt spielen zu können müssen Sie:
 
 ## Top-Down entwurf
 ***
-Hier könnt ihr sehen was ich mir so als Grundidee und Plangun vorgenommen hatte:
-[image](Screenshot_20230124_212259)
+Hier könnt ihr sehen was ich mir so als Grundidee und Planung vorgenommen hatte:
+[image](/Ef-Info/docs/images/Screenshot_20230124_212259.png)
 
 ## Code erklärung
 ***
