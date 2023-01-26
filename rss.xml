@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
+    <channel>
+        <title>Lern Blog Blog</title>
+        <link>https://gaeschpu.github.io/Ef-Info/</link>
+        <description>Lern Blog Blog</description>
+        <lastBuildDate>Thu, 26 Jan 2023 16:41:58 GMT</lastBuildDate>
+        <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
+        <generator>https://github.com/jpmonette/feed</generator>
+        <language>de</language>
+        <item>
+            <title><![CDATA[Erste Lektion Informatik EF]]></title>
+            <link>https://gaeschpu.github.io/Ef-Info/blog</link>
+            <guid>/blog</guid>
+            <pubDate>Thu, 26 Jan 2023 16:41:58 GMT</pubDate>
+            <description><![CDATA[Am Anfang war ich richtig verloren muss ich sagen, doch zu meiner Verteidigung, ich habe seit einem Jahr nicht mehr programmiert.]]></description>
+            <content:encoded><![CDATA[<p>Am Anfang war ich richtig verloren muss ich sagen, doch zu meiner Verteidigung, ich habe seit einem Jahr nicht mehr programmiert.
+Die ersten paar Zeilen waren recht harzig, doch desto weiter ich kam umso mehr Spass hatte ich.
+Dann unterlief mir ein lustiger Fehler und zwar solte der Code ein Ster werden, doch es wurde dann das. </p><p>from turtle import *
+fillcolor("red")
+begin_fill()
+for x in range(6):
+forward(100)
+left(140)
+backwardward(100)
+right(80)</p><p>end_fill()
+Ich habe forward und Backward verwechselt. </p><p>Zum Schluss der Lektion habe ich noch versucht eine Random Farbe generieren zu können doch das Einzige was ich generiert habe waren ganz viele Rote Zeilen, mit Fehlermeldungen.
+Doch im groben und ganzen hat es mir extrem Spass gemacht;)</p>]]></content:encoded>
+        </item>
+    </channel>
+</rss>

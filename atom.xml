@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://gaeschpu.github.io/Ef-Info/</id>
+    <title>Lern Blog Blog</title>
+    <updated>2023-01-26T16:41:58.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://gaeschpu.github.io/Ef-Info/"/>
+    <subtitle>Lern Blog Blog</subtitle>
+    <icon>https://gaeschpu.github.io/Ef-Info/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[Erste Lektion Informatik EF]]></title>
+        <id>/blog</id>
+        <link href="https://gaeschpu.github.io/Ef-Info/blog"/>
+        <updated>2023-01-26T16:41:58.000Z</updated>
+        <summary type="html"><![CDATA[Am Anfang war ich richtig verloren muss ich sagen, doch zu meiner Verteidigung, ich habe seit einem Jahr nicht mehr programmiert.]]></summary>
+        <content type="html"><![CDATA[<p>Am Anfang war ich richtig verloren muss ich sagen, doch zu meiner Verteidigung, ich habe seit einem Jahr nicht mehr programmiert.
+Die ersten paar Zeilen waren recht harzig, doch desto weiter ich kam umso mehr Spass hatte ich.
+Dann unterlief mir ein lustiger Fehler und zwar solte der Code ein Ster werden, doch es wurde dann das. </p><p>from turtle import *
+fillcolor("red")
+begin_fill()
+for x in range(6):
+forward(100)
+left(140)
+backwardward(100)
+right(80)</p><p>end_fill()
+Ich habe forward und Backward verwechselt. </p><p>Zum Schluss der Lektion habe ich noch versucht eine Random Farbe generieren zu können doch das Einzige was ich generiert habe waren ganz viele Rote Zeilen, mit Fehlermeldungen.
+Doch im groben und ganzen hat es mir extrem Spass gemacht;)</p>]]></content>
+    </entry>
+</feed>
