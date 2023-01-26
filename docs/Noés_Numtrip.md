@@ -1,6 +1,9 @@
 # Numtrip in Arbeit 
 *** 
-[img](/Ef-Info/docs/images/numtripvideo.mp4)
+
+<video src="./images/numtripvideo.mp4" width="550" autoplay />
+
+
 Ist doch ein simples Spiel, auf Zahlen drücken und sie Fusionieren, genau so kam mir numtrip vor.
 Doch als wir mit der Programmation begannen merkte ich schnell, dass es nicht so einfach ist wie es beim spielen aussieht. 
 Schon nur das Spielfeld mit gesetzen zahlen die sich nicht bewegen haben mir mühe bereitet. 
