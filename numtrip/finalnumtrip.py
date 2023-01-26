@@ -34,17 +34,17 @@ def eingabe_x(): # EIngabe des Benutzers
     valid=False
     while not valid:
         try:
-            x=input('Geben sie eine Spalte ein ')
+            x=input('Geben sie eine Spalte ein: ')
             if not x.isnumeric():
                 continue# macht dass es wieder von vorne (while) anfängt
             x=int(x)
             if x<0 or x>5:# muss doch grösser als O und kleiner als 5 sein?
-                print('Zahl muss zwischen 1 und 5 sein')
+                print('Zahl muss zwischen 1 und 5 sein!')
                 continue
             valid=True
 
         except:    
-            print('Sie müssen eine Zahl eingeben')
+            print('Sie müssen eine Zahl eingeben!')
     
     return(x-1)
     
@@ -53,16 +53,16 @@ def eingabe_y(): # Zeilen Eingabe y
     valid=False
     while not valid:
         try:
-            y=input('Geben sie eine Zeile ein ')
+            y=input('Geben sie eine Zeile ein: ')
             if not y.isnumeric and len(y)==1:
                 continue
             y=int(y)
             if y<0 or y>5:# muss doch grösser als O und kleiner als 6 sein?
-                print('Zahl muss zwischen 1 und 5 sein')
+                print('Zahl muss zwischen 1 und 5 sein!')
                 continue
             valid=True
         except:
-            print('Sie müssen eine Zahl eingeben')
+            print('Sie müssen eine Zahl eingeben!')
     
     return(y-1)
 
@@ -102,7 +102,7 @@ def überprüfung(): # ausprobiert(Jodoks Code) würde machen dass man keine all
     if partner == True:
         pass
     else:
-        print('Keinen partner, gib neue zahl ein')
+        print('Keine Nachbarszahl, gib neue zahl ein!')
 
 def aufdecken(zeile, spalte, zahl):
 # Rahmenbedingungen
