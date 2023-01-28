@@ -1,7 +1,7 @@
 # Numtrip in Arbeit
 
 
-![img](/Ef-Info/docs/images/numtrip.gif)
+![img](images/numtrip.gif)
 
 Ist doch ein simples Spiel, auf Zahlen drücken und sie Fusionieren, genau so kam mir numtrip vor.
 Doch als wir mit der Programmation begannen merkte ich schnell, dass es nicht so einfach ist wie es beim spielen aussieht. 
@@ -22,7 +22,8 @@ Um es überhaupt spielen zu können müssen Sie:
 ## Top-Down entwurf
 ***
 Hier könnt ihr sehen was ich mir so als Grundidee und Planung vorgenommen hatte:
-![image](images/Topdown.png)
+
+[image](images/Topdown.png)
 
 ## Code erklärung
 
