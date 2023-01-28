@@ -3,6 +3,7 @@ Am Anfang war ich richtig verloren muss ich sagen, doch zu meiner Verteidigung, 
 Die ersten paar Zeilen waren recht harzig, doch desto weiter ich kam umso mehr Spass hatte ich. 
 Dann unterlief mir ein lustiger Fehler und zwar solte der Code ein Ster werden, doch es wurde dann das. 
 
+
 from turtle import *
 fillcolor("red")
 begin_fill()
