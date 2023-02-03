@@ -1,6 +1,15 @@
 import random
 
-feld= [[4,4,2,2,8],[4,2,2,8,8],[4,8,4,4,4],[2,2,4,8,8],[8,8,4,4,8]]
+#feld= [[4,4,2,2,8],[4,2,2,8,8],[4,8,4,4,4],[2,2,4,8,8],[8,8,4,4,8]]
+feld = [[], [], [], [], []]
+#feld = [[16,16,4,8,16],[2,4,8,16,1],[4,8,16,1,2],[8,16,1,2,4],[16,1,2,4,8]]
+
+def generiereFeld():
+    zahlen=[1,2,4,8]
+    for i in range(5):
+        for j in range(5):
+            feld[i].append(random.choice(zahlen))
+
 def spielfeld():
     zeilennummer=1
    
@@ -30,41 +39,24 @@ def spielfeld():
         print('      |      |      |      |      |      |')
     print('      +------+------+------+------+------+')
 
-def eingabe_x(): # EIngabe des Benutzers
+def eingabe(zeileoderspalte): # Eingabe des Benutzers
     valid=False
     while not valid:
         try:
-            x=input('Geben sie eine Spalte ein: ')
-            if not x.isnumeric():
+            value=input(f'Geben sie eine {zeileoderspalte} ein: ')
+            if not value.isnumeric():
                 continue# macht dass es wieder von vorne (while) anfängt
-            x=int(x)
-            if x<0 or x>5:# muss doch grösser als O und kleiner als 5 sein?
+            value=int(value)
+            if value<0 or value>5:# muss doch grösser als O und kleiner als 5 sein?
                 print('Zahl muss zwischen 1 und 5 sein!')
                 continue
             valid=True
 
         except:    
-            print('Sie müssen eine Zahl eingeben!')
+            print(f'Sie müssen eine {zeileoderspalte} eingeben!')
     
-    return(x-1)
+    return(value-1)
     
-
-def eingabe_y(): # Zeilen Eingabe y 
-    valid=False
-    while not valid:
-        try:
-            y=input('Geben sie eine Zeile ein: ')
-            if not y.isnumeric and len(y)==1:
-                continue
-            y=int(y)
-            if y<0 or y>5:# muss doch grösser als O und kleiner als 6 sein?
-                print('Zahl muss zwischen 1 und 5 sein!')
-                continue
-            valid=True
-        except:
-            print('Sie müssen eine Zahl eingeben!')
-    
-    return(y-1)
 
 def nachunten(): # verschiebt die 0 von aufedcken nach oben  
     for j in range(5):
@@ -100,9 +92,10 @@ def überprüfung(): # ausprobiert(Jodoks Code) würde machen dass man keine all
                 if feld[a][b] == feld[a][b + 1]:
                     partner = True
     if partner == True:
-        pass
+        return True
     else:
-        print('Keine Nachbarszahl, gib neue zahl ein!')
+        print('Keine Nachbarszahl, gib neue Zahl ein!')
+    return partner
 
 def aufdecken(zeile, spalte, zahl):
 # Rahmenbedingungen
@@ -124,13 +117,14 @@ def aufdecken(zeile, spalte, zahl):
 def play():
     spielfeld()
     while True:
-        x= eingabe_x()
-        y=eingabe_y()
-        überprüfung()
+        x= eingabe('zeile')
+        y=eingabe('spalte')
         zahl = feld[x][y]
-        aufdecken(x, y, zahl)
-        feld[x][y] = zahl*2
-        nachunten()
-        auffüllen()
+        if überprüfung() == True:
+            aufdecken(x, y, zahl)
+            feld[x][y] = zahl*2
+            nachunten()
+            auffüllen()
         spielfeld()
+generiereFeld()
 play()
