@@ -1,4 +1,4 @@
-# Numtrip in Arbeit 
+# Numtrip in Arbeit
 
 
 ![img](images/numtrip.gif)
@@ -30,20 +30,21 @@ Hier könnt ihr sehen was ich mir so als Grundidee und Planung vorgenommen hatte
 Hier erkläre ich euch einen kleien Auschnitt aus meinem Code:
 ````py 
 def eingabe_x(): 
-    valid=False                             >Hier wird bestimmt dass Valid = Falsch ist, somit wird die definition solange laufen bis valid=True ist
+    valid=False                             '''Hier wird bestimmt dass Valid = Falsch ist, somit wird die definition solange laufen bis valid=True ist'''
     while not valid:
         try:
             x=input('Geben sie eine Spalte ein ')
             '''
             htrdzrd
             '''
-            if not x.isnumeric():#Da wird überprüft ob x eine Zahl ist
+            if not x.isnumeric():'''Da wird überprüft ob x eine Zahl ist'''
                 continue
             x=int(x)
-            if x<0 or x>5:                 # x muss über null und unter 6 sein, da das Spielfeld ja 5 auf 5 Felder ist
+            if x<0 or x>5:                 '''x muss über null und unter 6 sein, da das Spielfeld ja 5 auf 5 Felder ist'''
                 print('Zahl muss zwischen 1 und 5 sein')
                 continue
-            valid=True                      # Ist alles das überprüft und korrekt ist alles Valid also Valid=True
+            valid=True                      '''Ist alles das überprüft und korrekt ist alles Valid also'''
+            Valid=True
 
         except:    
             print('Sie müssen eine Zahl eingeben') # Doch da es auch immer Menschen git die es nicht tscheggen, muss man erwarten dass alles mögliche eingeben wird, deshald das except...
