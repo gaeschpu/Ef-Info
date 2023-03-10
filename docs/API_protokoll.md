@@ -1,7 +1,8 @@
 ## Api
  (application programming interface) is ein schnittstelle die verschiedenen anwendungen erlaubt miteinander zu kommunizieren und daten auszutauschen. grundlegend stellt die api ein satz von regeln und protokollen zur verfügung, damit eine anwendung daten von einer anderen anwendung anfordern und empfangen kann. ein beispiel dafür wäre eine website, die daten eines anderen servers oder einer datenbank abrufen möchte. durch verwendung einer api kann die website eine anfrage an den server oder die datenbank senden und die benötigten daten abrufen, ohne die gesamte datenbankstruktur oder das backend-system zu kennen. stattdessen kann die api als zwischenschicht fungieren und anforderungen von einer anwendung an eine andere weiterleiten, wodurch ein nahtloser datenfluss und effektive kommunikation ermöglicht werden.
 
-## Json format
+## Json format 
+
 json (javascript object notation) ist ein datenformat, das leicht lesbar und schreibbar ist und häufig für den austausch von daten zwischen verschiedenen anwendungen verwendet wird.
 
 ## Xml format
