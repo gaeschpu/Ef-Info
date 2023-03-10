@@ -1,53 +1,37 @@
-Protokol 
--	 Was ist eine API? 
-o	The solution is an API. An API is the tool that makes a website's data digestible for a computer.
-o	When you push the refresh button in your app, it talks to a server via an API and fetches the newest info.
--	
-	
-•  JSON Format
--	in JSON, a value that starts and ends with square brackets ([]) is a list of values.
-•  XML Format
--	Like JSON, XML provides a few simple building blocks that API makers use to structure their data.
-•  HTTP Request: 
-These four pieces — URL, method, headers, and body — make up a complete HTTP request.
-The four methods most commonly seen in APIs are:
-•	GET - Asks the server to retrieve a resource
-•	POST - Asks the server to create a new resource
-•	PUT - Asks the server to edit/update an existing resource
-•	DELETE - Asks the server to delete a resource
-•	URL
-o	Ein bestimmter Aufbau für eine request an den Server
-o	Ist eine simple methode für den Client zu sagen mit was er interagieren will 
-•	Methoden
-o	Was will der client machen post, get , put
-•	Headers 
-o	Eine liste von sachen was der client gemacht hat, wenn was , wo 
-•	Body
-o	Muss keine Fixe Struktur haben, nicht so wie die obendran
-•  HTTP Status Codes
+## Api
+ (application programming interface) is ein schnittstelle die verschiedenen anwendungen erlaubt miteinander zu kommunizieren und daten auszutauschen. grundlegend stellt die api ein satz von regeln und protokollen zur verfügung, damit eine anwendung daten von einer anderen anwendung anfordern und empfangen kann. ein beispiel dafür wäre eine website, die daten eines anderen servers oder einer datenbank abrufen möchte. durch verwendung einer api kann die website eine anfrage an den server oder die datenbank senden und die benötigten daten abrufen, ohne die gesamte datenbankstruktur oder das backend-system zu kennen. stattdessen kann die api als zwischenschicht fungieren und anforderungen von einer anwendung an eine andere weiterleiten, wodurch ein nahtloser datenfluss und effektive kommunikation ermöglicht werden.
 
-•  Endpunkte
-•  Polling
+## Json format
+json (javascript object notation) ist ein datenformat, das leicht lesbar und schreibbar ist und häufig für den austausch von daten zwischen verschiedenen anwendungen verwendet wird.
 
-Was ist eine API?
-Natürlich! Eine API (Application Programming Interface) ist eine Schnittstelle, die es verschiedenen Anwendungen ermöglicht, miteinander zu kommunizieren und Daten auszutauschen. Im Grunde genommen stellt die API einen Satz von Regeln und Protokollen bereit, die es einer Anwendung ermöglichen, Daten von einer anderen Anwendung zu fordern und zu empfangen.
-Ein Beispiel hierfür wäre eine Website, die Daten von einem anderen Server oder einer Datenbank abrufen möchte. Durch die Verwendung einer API kann die Website eine Anfrage an den Server oder die Datenbank senden und die benötigten Daten abrufen, ohne die gesamte Datenbankstruktur oder das Backend-System kennen zu müssen. Stattdessen kann die API als Zwischenschicht fungieren und die Anforderungen von der einen Anwendung an die andere weiterleiten, wodurch ein nahtloser Datenfluss und eine effektive Kommunikation ermöglicht werden.JSON Format
-JSON (JavaScript Object Notation) ist ein Datenformat, das leicht lesbar und schreibbar ist und häufig für den Austausch von Daten zwischen verschiedenen Anwendungen verwendet wird.
-XML Format
-XML (Extensible Markup Language) ist ein Textformat, das Daten in strukturierter Form speichert und häufig für den Austausch von Daten zwischen verschiedenen Systemen verwendet wird.
-HTTP Request:
-HTTP Request ist ein Begriff, der sich auf die Anfrage bezieht, die ein Client an einen Server sendet, um Daten abzurufen oder zu senden.
-URL: Die URL (Uniform Resource Locator) ist die Adresse, die den Standort der Ressource angibt, auf die der Client zugreifen möchte.
-Methoden: Die Methoden beschreiben die Art der Anfrage, die der Client an den Server sendet, z.B. GET, POST, PUT oder DELETE.
-•	GET - Asks the server to retrieve a resource
-•	POST - Asks the server to create a new resource
-•	PUT - Asks the server to edit/update an existing resource
-•	DELETE - Asks the server to delete a resource
-Headers: Die Headers enthalten Informationen über die Anfrage, wie z.B. den verwendeten Browser, den akzeptierten Datenformattyp usw.
-Body: Der Body enthält die tatsächlichen Daten, die der Client an den Server senden möchte, z.B. Benutzername und Passwort.
-HTTP Status Codes
-HTTP-Statuscodes geben an, ob eine Anfrage erfolgreich bearbeitet wurde oder nicht. Beispiele für HTTP-Statuscodes sind 200 OK, 404 Not Found und 500 Internal Server Error.
-Endpunkte
-Ein Endpunkt ist die spezifische Adresse, die einen bestimmten Service oder eine bestimmte Funktion innerhalb einer API definiert.
-Polling
-Polling bezieht sich auf den Prozess, bei dem eine Anwendung regelmäßig eine API abfragt, um nach aktualisierten Informationen zu suchen. Dieser Prozess kann auch als "Abfragen" bezeichnet werden.
+## Xml format
+xml (extensible markup language) ist ein textformat, das daten in strukturierter form speichert und häufig für den austausch von daten zwischen verschiedenen systemen verwendet wird.
+
+## Http request:
+http request ist ein begriff, der sich auf die anfrage bezieht, die ein client an einen server sendet, um daten abzurufen oder zu senden.
+
+## Url:
+die url (uniform resource locator) ist die adresse, die den standort der ressource angibt, auf die der client zugreifen möchte.
+
+## Methoden:
+die methoden beschreiben die art der anfrage, die der client an den server sendet, z.b. get, post, put oder delete.
+
+- GET - fordert den Server auf, eine Ressource abzurufen.
+- POST - fordert den Server auf, eine neue Ressource zu erstellen.
+- PUT - fordert den Server auf, eine vorhandene Ressource zu bearbeiten/aktualisieren.
+- DELETE - fordert den Server auf, eine Ressource zu löschen.
+
+## Headers:
+die headers enthalten informationen über die anfrage, wie z.b. den verwendeten browser, den akzeptierten datenformattyp usw.
+
+## Body:
+der body enthält die tatsächlichen daten, die der client an den server senden möchte, z.b. benutzername und passwort.
+
+## Http status codes
+http-statuscodes geben an, ob eine anfrage erfolgreich bearbeitet wurde oder nicht. beispiele für http-statuscodes sind 200 ok, 404 not found und 500 internal server error.
+
+## Endpunkte
+ein endpunkt ist die spezifische adresse, die einen bestimmten service oder eine bestimmte funktion innerhalb einer api definiert.
+
+## Polling
+polling bezieht sich auf den prozess, bei dem eine anwendung regelmäßig eine api abfragt, um nach aktualisierten informationen zu suchen. dieser prozess kann auch als "abfragen" bezeichnet werden."
