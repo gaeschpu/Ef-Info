@@ -1,0 +1,20 @@
+{
+	"folders": [
+		{
+			"path": "Infotag/mpy-example1"
+		},
+		{
+			"name": "Ef-Info",
+			"path": "."
+		},
+		{
+			"name": "esp32-blink",
+			"path": "Infotag/mpy-example1/esp32-blink"
+		},
+		{
+			"name": "serial:/COM3",
+			"uri": "serial://com3/"
+		}
+	],
+	"settings": {}
+}
