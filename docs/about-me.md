@@ -2,7 +2,7 @@
 Ich bin Noé Gasparrini
 Meine Hobbys sind Volleyball und Angeln 
 
-![Image](/Ef-Info/docs/images/numtripvideo.mp4) 
+![Image](images/numtrip.gif) 
 
 Ich habe kein bestimmtes Lieblingsessen aber liebe alles was mit Fisch zu tun hat(ausser Austern;).
 
